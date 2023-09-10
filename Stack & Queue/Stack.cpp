@@ -89,6 +89,25 @@ void Display()
     }
 }
 
+int Size()
+{
+    int count = 0;
+    if (top >= 0)
+    {
+        for (int i = top; i >= 0; i--)
+        {
+            count++;
+        }
+        cout<<"Elements in Stack is: ";
+        return count;
+    }
+    else
+    {
+        cout << "Elements in Stack is: ";
+        return 0;
+    }
+}
+
 int main()
 {
     cout << "Enter Stack Size: ";
@@ -96,7 +115,7 @@ int main()
 
     int op;
 
-    cout << "1 -> Push \n2 -> Pop \n3 -> Peek \n4 -> Isfull \n5 -> IsEmpty \n6 -> Display \n0 -> Exit\n";
+    cout << "1 -> Push \n2 -> Pop \n3 -> Peek \n4 -> Isfull \n5 -> IsEmpty \n6 -> Display \n7 -> Size \n8 -> Exit\n";
 
     while (1)
     {
@@ -129,8 +148,12 @@ int main()
             Display();
             break;
 
-        case 0:
-            cout << "\nNo Operation Peformed Program Exit...";
+        case 7:
+            cout<<Size() <<endl;
+            break;
+
+        case 8:
+            cout << "\nProgram is Exit...";
             return 0;
 
         default:
