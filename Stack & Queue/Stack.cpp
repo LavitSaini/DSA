@@ -38,7 +38,7 @@ void Pop()
     }
 }
 
-int peek()
+int  peek()
 {
     if (top <= -1)
     {
@@ -153,7 +153,7 @@ int main()
             break;
 
         case 8:
-            cout << "\nProgram is Exit...";
+            cout << "\nProgram is Exit...\n";
             return 0;
 
         default:
